@@ -19,13 +19,38 @@
 </head>
 
 <body>
-    <nav>
-        <span type="button">홈</span>|
-        <span type="button">메뉴1</span>|
-        <span type="button">메뉴2</span>|
-        <span type="button">메뉴3</span>|
-    </nav>
+    <div class="modal-chat">
+        <div class="form-chat">
+            <p><span class="inform">알고 싶은 여행지를 선택해주세요!</span></p>
+            <select class="inform">
+                <option>베트남</option>
+                <option>태국</option>
+                <option>말레이시아</option>
+                <option>싱가폴</option>
+            </select>
+            <p> </p>
+            <p><span class="inform">문의내용을 적어주세요!</span></p>
+            <textarea class="inform" id="contents"></textarea>
+            <p> </p>
+            <div class="btn-group">
+                <span class="submit">제출</span>
+                <span class="close">닫기</span>
+            </div>
 
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <i class="fab fa-accusoft"><span id="aa" type="button" href="#">HangHae 18조</span></i>
+
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Login</a></li>
+            <li><a href="">Join Membership</a></li>
+        </ul>
+    </nav>
     <header>
         <div class="hd_text">
             <p class="hd_title">조용하고 따뜻한 남쪽으로 오세요</p>
@@ -48,9 +73,10 @@
             </div>
         </div>
     </header>
-
+    <div class="chat"><span class="open-form">문의하기</span></div>
     <script src="carousel.js"></script>
-    
+    <script src="chat.js"></script>
+
 </body>
 
 </html>

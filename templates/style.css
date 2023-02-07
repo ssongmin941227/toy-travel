@@ -1,43 +1,49 @@
-*{
+/* *{
     font-family: 'Noto Sans KR', sans-serif;
-}
-html{
+} */
+html {
     scroll-behavior: smooth;
 }
-.rightNav{
+
+.rightNav {
     z-index: 500;
     position: fixed;
     margin: 5px 50px auto auto;
-    width : 150px;
-    height : 500px;
+    width: 150px;
+    height: 500px;
     background-color: white;
     border: 1px solid black;
 }
+
 /* .forText{
     position: absolute;
     width: 1100px;
     height: 600px;
 } */
-header{
-    overflow : hidden;
-    height : 600px;
+header {
+    overflow: hidden;
+    height: 600px;
     background-color: green;
 }
-.slide-container{
+
+.slide-container {
     width: 300vw;
     transition: all 0.3s;
-    
+
 }
-.slide-box{
+
+.slide-box {
     width: 100vw;
-    float:left;
+    float: left;
 }
-.slide-box img{
-    width:100%;
+
+.slide-box img {
+    width: 100%;
     height: 600px;
-    object-fit:cover;
+    object-fit: cover;
 }
-.slide-indicators{
+
+.slide-indicators {
     position: absolute;
     text-align: center;
     width: 100vw;
@@ -45,31 +51,40 @@ header{
     top: 600px;
     z-index: 10;
 }
-.btn-slide{
+
+.btn-slide {
     height: 10px;
     width: 3vw;
     border: 2px solid gray;
     border-radius: 5px;
 }
-.current{
+
+.current {
     border: 2px solid white;
     background-color: brown;
 }
 
-header>.hd-back>div>span{
+header>.hd-back>div>span {
     display: flex;
     color: white;
     text-align: right;
     margin-left: auto;
     margin-right: 10px;
 }
-header>.hd-back>div>.smallTitle{
+
+header>.hd-back>div>.smallTitle {
     display: flex;
     color: white;
     font-size: xx-large;
     font-weight: bold;
 }
-nav{
+
+#aa:hover {
+    font-weight: bold;
+    color: black;
+}
+
+nav {
     width: 1100px;
     height: 50px;
     margin: 0px auto 0px auto;
@@ -77,7 +92,7 @@ nav{
     background-color: transparent;
     color: white;
     font-size: small;
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,32 +104,183 @@ nav>span {
     font-weight: normal;
     color: gray;
 }
-nav>span:hover{
+
+nav>span:hover {
     color: black;
     font-weight: bold;
 }
 
-.hd_text{
+.hd_text {
     position: absolute;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     width: auto;
     height: auto;
     right: 420px;
-    top : 300px;
+    top: 300px;
     text-align: right;
-    vertical-align:middle;
-    color : white;
+    vertical-align: middle;
+    color: white;
     padding: 20px;
     border-radius: 20px;
-    
+
     z-index: 20;
 }
-.hd_title{
+
+.hd_title {
     font-size: xx-large;
-    font-weight: bold;   
+    font-weight: bold;
     text-shadow: 2px 2px 4px gray;
 }
-.hd_detail{
-    color : white;
+
+.hd_detail {
+    color: white;
     text-shadow: 2px 2px 4px gray;
+}
+
+.chat {
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+}
+
+.chat>span {
+    border: 2px solid black;
+    border-style: dashed;
+    background-color: white;
+    padding: 20px;
+    font-size: xx-large;
+    border-radius: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    text-shadow: 2px 2px 10px gray;
+}
+
+.chat>span:hover {
+    color: orangered;
+    border-color: orangered;
+    text-shadow: 2px 2px 10px orangered;
+}
+.modal-chat{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: none;
+    transition: all 1s;
+    
+}
+.modal-chat>.form-chat{
+    position: absolute;
+    width: 600px;
+    height: 330px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 20px white;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    
+}
+.modal-chat>.form-chat>p>span{
+    font-weight: bold;
+}
+.modal-chat>.form-chat>.inform{
+    display: block;
+    width: 100%;
+}
+.btn-group{
+    width:100%;
+    text-align: right;
+    justify-content: right;
+}
+.modal-chat>.form-chat>.btn-group>span{
+    width:100px;
+    margin : 5px;
+    padding : 5px;
+    border : 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+
+    font-weight: bolder;
+} 
+.modal-chat>.form-chat>.btn-group>.submit{
+    background-color: rgba(250,50,50,0.4);
+}
+.modal-chat>.form-chat>.btn-group>.submit:hover{
+    background-color: rgba(250,50,50,0.8);
+    color : white;
+}
+.modal-chat>.form-chat>.btn-group>.close:hover{
+    background-color: rgba(0,0,0,0.8);
+    color : white;
+}
+
+.show{
+    display: block;
+}
+
+root {
+    --text-color: #f0f4f5;
+    --background-color: #263343;
+    --accent-color: #d49466;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Open sans';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: darkgreen;
+    padding: 8px 12px;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar__logo i {
+    color: white;
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.navbar__menu li {
+    padding: 8px 12px;
+    float: right;
+}
+
+.navbar__menu :hover {
+    background: #d49466;
+    border-radius: 4px;
+}
+
+
+.navbar__icons li {
+    padding: 8px 12px;
+}
+
+.navbar__toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: #d49466;
 }
