@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -104,20 +107,6 @@
         }
     </style>
     <script>
-        const btn = document.querySelectorAll('.btn-slide')
-
-        btn.forEach((element, index) => {
-            element.addEventListener('click', function (e) {
-                $('.btn-slide').removeClass('current')
-                e.target.classList.add('current')
-                moveBackground(index)
-            })
-        })
-
-        function moveBackground(index) {
-            var temp = (index * (-100)).toString()
-            document.querySelector('.slide-container').style.transform = "translateX(" + temp + "vw)"
-        }
 
         function vietnam() {
             let vietnamMenu = document.getElementById('vietnam');
@@ -190,32 +179,6 @@
 </head>
 
 <body>
-    <nav>
-        <span type="button">홈</span>|
-        <span type="button">메뉴1</span>|
-        <span type="button">메뉴2</span>|
-        <span type="button">메뉴3</span>|
-    </nav>
-    <header>
-        <div class="slide-indicators">
-            <button class="btn-slide current"></button>
-            <button class="btn-slide"></button>
-            <button class="btn-slide"></button>
-        </div>
-        <div class="slide-container">
-            <div class="slide-box">
-                <img src="/static/1.jpg">
-            </div>
-            <div class="slide-box">
-                <img src="/static/2.jpg">
-            </div>
-            <div class="slide-box">
-                <img src="/static/3.jpg">
-            </div>
-        </div>
-
-        </div>
-    </header>
     <main class="mainbar">
         <div class="mainbar__country">
             <button onclick="vietnam()" class="vietnamButton">베트남</button>
