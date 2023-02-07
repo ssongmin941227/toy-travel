@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -15,9 +17,229 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-    <title>여행을 떠나요![동남아로]</title>
+    <title>여행을 떠나요![동남아편]</title>
+    <style>
+        #vietnam {
+            display: none;
+        }
+
+        #thailand {
+            display: none;
+        }
+
+        #malaysia {
+            display: none;
+        }
+
+        #singapore {
+            display: none;
+        }
+
+        .mainbar {
+            background-color: beige;
+            width: 100%;
+            margin-top: 50px;
+            padding: 10px 0 10px 0;
+
+            display: column;
+        }
+
+        .mainbar__country {
+            background-color: #008000;
+            display: flex;
+            width: 100%;
+        }
+
+        .mainbar__country>button {
+            width: 100%;
+            height: 50px;
+        }
+
+        .mainbar__menu>div {
+            background-color: green;
+
+            margin-top: 30px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainbar__menu>div>button {
+            width: 90%;
+            margin: 3px auto 3px auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mainbar__detail {
+            background-color: greenyellow;
+
+            margin: 30px 10px 30px 10px;
+
+            width: auto;
+            padding: 15px;
+
+            display: flex;
+            display: none;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            border: 2px solid black;
+        }
+
+        .vietnamButton {
+            background-image: "https://image.hanatour.com/usr/cms/resize/800_0/2019/12/11/10000/6f4dbed2-5b2a-4c10-8871-369042afe59a.jpg";
+        }
+
+        .mainbar__menu>button {
+            margin: 10px auto 10px auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+
+        function vietnam() {
+            let vietnamMenu = document.getElementById('vietnam');
+            if (vietnamMenu.style.display !== 'none') {
+                vietnamMenu.style.display = 'none';
+            }
+            else {
+                vietnamMenu.style.display = 'block';
+            }
+        }
+        function thailand() {
+            let thailandMenu = document.getElementById('thailand');
+            if (thailandMenu.style.display !== 'none') {
+                thailandMenu.style.display = 'none';
+            }
+            else {
+                thailandMenu.style.display = 'block';
+            }
+
+        }
+        function malaysia() {
+            let malaysiaMenu = document.getElementById('malaysia');
+            if (malaysiaMenu.style.display !== 'none') {
+                malaysiaMenu.style.display = 'none';
+            }
+            else {
+                malaysiaMenu.style.display = 'block';
+            }
+
+        }
+        function singapore() {
+            let singaporeMenu = document.getElementById('singapore');
+            if (singaporeMenu.style.display !== 'none') {
+                singaporeMenu.style.display = 'none';
+            }
+            else {
+                singaporeMenu.style.display = 'block';
+            }
+
+        }
+        function openDetailHanoi() {
+            let detailHanoi = document.getElementById('detailHanoi');
+            if (detailHanoi.style.display !== 'none') {
+                detailHanoi.style.display = 'none';
+            }
+            else {
+                detailHanoi.style.display = 'block';
+            }
+
+        }
+        function closeDetailHanoi() {
+            let detailHanoi = document.getElementById('detailHanoi');
+            if (detailHanoi.style.display !== 'none') {
+                detailHanoi.style.display = 'none';
+            }
+
+        }
+
+        function openDetailNhatrang() {
+            let detailNhatrang = document.getElementById('detailNhatrang');
+            if (detailNhatrang.style.display !== 'none') {
+                detailNhatrang.style.display = 'none';
+            }
+            else {
+                detailNhatrang.style.display = 'block';
+            }
+
+        }
+    </script>
 </head>
+
 <body>
-    
+    <main class="mainbar">
+        <div class="mainbar__country">
+            <button onclick="vietnam()" class="vietnamButton">베트남</button>
+            <button onclick="thailand()">태국</button>
+            <button onclick="malaysia()">말레이시아</button>
+            <button onclick="singapore()">싱가포르</button>
+        </div>
+        <div class="mainbar__menu">
+            <div class="detail" id="vietnam">
+                <button onclick="openDetailHanoi()">하노이/하롱베이 5일</button>
+                <div class="mainbar__detail" id="detailHanoi">
+                    <p>상품 핵심포인트</p>
+                    <p>① 가족여행 맞춤! 5성급 호텔 숙박</p>
+                    <p>② 하노이 여행의 정석! 하롱베이와 옌뜨 국립공원</p>
+                    <p>③ 하롱베이에서는 단독 유람선(목선) 탑승하여 하롱베이 관광이 이루어집니다!</p>
+                    <p>④ 하롱베이 비경관광 포함</p>
+                    <p>⑤ 여행의 피로를 풀어줄 전신마사지 2시간 포함</p>
+                    <p>⑥ 하노이시티투어 (나이트투어+롯데전망대),</p>
+                    <p>⑦ 하롱베이→하노이 편도 고속도로로 빠르게 이동</p>
+                    <p>⑧ 미식의 천국 베트남에서의 맛있는 여행</p>
+                    <p>⑨ 우리가족 폴라로이드 사진 제공(1인 1장)</p>
+                    <p>⑩ 우리가족 수다타임! 객실당 스낵바구니 제공</p>
+                    <p>⑪ 스낵과 함께할 하노이 비어 제공(1인 1캔)</p>
+                    <p>⑫ 베트남 전통모자 '농' 제공</p>
+                    <p>⑬ 부모님을 위한 이벤트 혜택 제공</p>
+                    <p>⑭ NO쇼핑! 가이드/기사경비포함</p>
+                    <button onclick="closeDetailHanoi()">닫기</button>
+                </div>
+
+                <button onclick="openDetailNhatrang()">나트랑&판랑&달랏 5일#판랑사막#랑비엔#나트랑관광</button>
+                <div class="mainbar__detail" id="detailNhatrang">
+                    <p>✅ 상품 핵심포인트</p>
+                    <p>① 나트랑/달랏 4성급 호텔</p>
+                    <p>② 나트랑 핵심관광▶</p>
+                    <p>③ 색다른 매력의 판랑 핵심관광▶</p>
+                    <p>④ 영원한 봄의 도시 달랏 핵심관광▶</p>
+                    <p>⑤ 비교 필수! 거품 없고 합리적인 가격의 선택관광</p>
+                </div>
+                <button>베트남 3일</button>
+                <button>베트남 자유여행</button>
+            </div>
+            <div class="detail" id="thailand">
+                <button>태국 5일</button>
+                <button>태국 4일</button>
+                <button>태국 3일</button>
+                <button>태국 자유여행</button>
+            </div>
+            <div class="detail" id="malaysia">
+                <button>말레이시아 5일</button>
+                <button>말레이시아 4일</button>
+                <button>말레이시아 3일</button>
+                <button>말레이시아 자유여행</button>
+            </div>
+            <div class="detail" id="singapore">
+                <button>싱가포르 5일</button>
+                <button>싱가포르 4일</button>
+                <button>싱가포르 3일</button>
+                <button>싱가포르 자유여행</button>
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
