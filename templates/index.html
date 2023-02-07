@@ -175,109 +175,71 @@
             }
 
         }
-
-        const btn = document.querySelectorAll('.btn-slide')
-
-        btn.forEach((element, index) => {
-            element.addEventListener('click', function (e) {
-                $('.btn-slide').removeClass('current')
-                e.target.classList.add('current')
-                moveBackground(index)
-            })
-        })
-
-        function moveBackground(index) {
-            var temp = (index * (-100)).toString()
-            document.querySelector('.slide-container').style.transform = "translateX(" + temp + "vw)"
-        }
-
     </script>
 </head>
 
 <body>
-    <nav>
-        <span type="button">홈</span>|
-        <span type="button">메뉴1</span>|
-        <span type="button">메뉴2</span>|
-        <span type="button">메뉴3</span>|
-    </nav>
-
-    <header>
-        <div class="hd_text">
-            <p class="hd_title">조용하고 따뜻한 남쪽으로 오세요</p>
-            <p class="hd_detail">도시를 떠나서<br>자연을 누리세요</p>
-        </div>
-        <div class="slide-indicators">
-            <button class="btn-slide current"></button>
-            <button class="btn-slide"></button>
-            <button class="btn-slide"></button>
-        </div>
-    </header>
     <main class="mainbar">
         <div class="mainbar__country">
             <button onclick="vietnam()" class="vietnamButton">베트남</button>
             <button onclick="thailand()">태국</button>
             <button onclick="malaysia()">말레이시아</button>
             <button onclick="singapore()">싱가포르</button>
+        </div>
+        <div class="mainbar__menu">
+            <div class="detail" id="vietnam">
+                <button onclick="openDetailHanoi()">하노이/하롱베이 5일</button>
+                <div class="mainbar__detail" id="detailHanoi">
+                    <p>상품 핵심포인트</p>
+                    <p>① 가족여행 맞춤! 5성급 호텔 숙박</p>
+                    <p>② 하노이 여행의 정석! 하롱베이와 옌뜨 국립공원</p>
+                    <p>③ 하롱베이에서는 단독 유람선(목선) 탑승하여 하롱베이 관광이 이루어집니다!</p>
+                    <p>④ 하롱베이 비경관광 포함</p>
+                    <p>⑤ 여행의 피로를 풀어줄 전신마사지 2시간 포함</p>
+                    <p>⑥ 하노이시티투어 (나이트투어+롯데전망대),</p>
+                    <p>⑦ 하롱베이→하노이 편도 고속도로로 빠르게 이동</p>
+                    <p>⑧ 미식의 천국 베트남에서의 맛있는 여행</p>
+                    <p>⑨ 우리가족 폴라로이드 사진 제공(1인 1장)</p>
+                    <p>⑩ 우리가족 수다타임! 객실당 스낵바구니 제공</p>
+                    <p>⑪ 스낵과 함께할 하노이 비어 제공(1인 1캔)</p>
+                    <p>⑫ 베트남 전통모자 '농' 제공</p>
+                    <p>⑬ 부모님을 위한 이벤트 혜택 제공</p>
+                    <p>⑭ NO쇼핑! 가이드/기사경비포함</p>
+                    <button onclick="closeDetailHanoi()">닫기</button>
+                </div>
 
-            <div class="mainbar__menu">
-                <div class="detail" id="vietnam">
-                    <button onclick="openDetailHanoi()">하노이/하롱베이 5일</button>
-                    <div class="mainbar__detail" id="detailHanoi">
-                        <p>상품 핵심포인트</p>
-                        <p>① 가족여행 맞춤! 5성급 호텔 숙박</p>
-                        <p>② 하노이 여행의 정석! 하롱베이와 옌뜨 국립공원</p>
-                        <p>③ 하롱베이에서는 단독 유람선(목선) 탑승하여 하롱베이 관광이 이루어집니다!</p>
-                        <p>④ 하롱베이 비경관광 포함</p>
-                        <p>⑤ 여행의 피로를 풀어줄 전신마사지 2시간 포함</p>
-                        <p>⑥ 하노이시티투어 (나이트투어+롯데전망대),</p>
-                        <p>⑦ 하롱베이→하노이 편도 고속도로로 빠르게 이동</p>
-                        <p>⑧ 미식의 천국 베트남에서의 맛있는 여행</p>
-                        <p>⑨ 우리가족 폴라로이드 사진 제공(1인 1장)</p>
-                        <p>⑩ 우리가족 수다타임! 객실당 스낵바구니 제공</p>
-                        <p>⑪ 스낵과 함께할 하노이 비어 제공(1인 1캔)</p>
-                        <p>⑫ 베트남 전통모자 '농' 제공</p>
-                        <p>⑬ 부모님을 위한 이벤트 혜택 제공</p>
-                        <p>⑭ NO쇼핑! 가이드/기사경비포함</p>
-                        <button onclick="closeDetailHanoi()">닫기</button>
-                    </div>
-
-                    <button onclick="openDetailNhatrang()">나트랑&판랑&달랏 5일#판랑사막#랑비엔#나트랑관광</button>
-                    <div class="mainbar__detail" id="detailNhatrang">
-                        <p>✅ 상품 핵심포인트</p>
-                        <p>① 나트랑/달랏 4성급 호텔</p>
-                        <p>② 나트랑 핵심관광▶</p>
-                        <p>③ 색다른 매력의 판랑 핵심관광▶</p>
-                        <p>④ 영원한 봄의 도시 달랏 핵심관광▶</p>
-                        <p>⑤ 비교 필수! 거품 없고 합리적인 가격의 선택관광</p>
-                    </div>
-                    <button>베트남 3일</button>
-                    <button>베트남 자유여행</button>
+                <button onclick="openDetailNhatrang()">나트랑&판랑&달랏 5일#판랑사막#랑비엔#나트랑관광</button>
+                <div class="mainbar__detail" id="detailNhatrang">
+                    <p>✅ 상품 핵심포인트</p>
+                    <p>① 나트랑/달랏 4성급 호텔</p>
+                    <p>② 나트랑 핵심관광▶</p>
+                    <p>③ 색다른 매력의 판랑 핵심관광▶</p>
+                    <p>④ 영원한 봄의 도시 달랏 핵심관광▶</p>
+                    <p>⑤ 비교 필수! 거품 없고 합리적인 가격의 선택관광</p>
                 </div>
-                <div class="detail" id="thailand">
-                    <button>태국 5일</button>
-                    <button>태국 4일</button>
-                    <button>태국 3일</button>
-                    <button>태국 자유여행</button>
-                </div>
-                <div class="detail" id="malaysia">
-                    <button>말레이시아 5일</button>
-                    <button>말레이시아 4일</button>
-                    <button>말레이시아 3일</button>
-                    <button>말레이시아 자유여행</button>
-                </div>
-                <div class="detail" id="singapore">
-                    <button>싱가포르 5일</button>
-                    <button>싱가포르 4일</button>
-                    <button>싱가포르 3일</button>
-                    <button>싱가포르 자유여행</button>
-                </div>
+                <button>베트남 3일</button>
+                <button>베트남 자유여행</button>
             </div>
-
+            <div class="detail" id="thailand">
+                <button>태국 5일</button>
+                <button>태국 4일</button>
+                <button>태국 3일</button>
+                <button>태국 자유여행</button>
+            </div>
+            <div class="detail" id="malaysia">
+                <button>말레이시아 5일</button>
+                <button>말레이시아 4일</button>
+                <button>말레이시아 3일</button>
+                <button>말레이시아 자유여행</button>
+            </div>
+            <div class="detail" id="singapore">
+                <button>싱가포르 5일</button>
+                <button>싱가포르 4일</button>
+                <button>싱가포르 3일</button>
+                <button>싱가포르 자유여행</button>
+            </div>
         </div>
     </main>
-
-
 </body>
 
 </html>
