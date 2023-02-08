@@ -1,6 +1,4 @@
-#!/bin/sh
-'''exec' "/Users/ssongmin/Desktop/toy travel/venv/bin/python3.11" "$0" "$@"
-' '''
+#!/Users/ssongmin/toy-travel/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
