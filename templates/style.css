@@ -4,26 +4,24 @@
 html {
     scroll-behavior: smooth;
 }
-
-.rightNav {
-    z-index: 500;
-    position: fixed;
-    margin: 5px 50px auto auto;
-    width: 150px;
-    height: 500px;
-    background-color: white;
-    border: 1px solid black;
-}
-
-/* .forText{
-    position: absolute;
-    width: 1100px;
-    height: 600px;
-} */
 header {
     overflow: hidden;
     height: 600px;
     background-color: green;
+}
+header>.hd-back>div>span {
+    display: flex;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+header>.hd-back>div>.smallTitle {
+    display: flex;
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 .slide-container {
@@ -64,52 +62,12 @@ header {
     background-color: brown;
 }
 
-header>.hd-back>div>span {
-    display: flex;
-    color: white;
-    text-align: right;
-    margin-left: auto;
-    margin-right: 10px;
-}
 
-header>.hd-back>div>.smallTitle {
-    display: flex;
-    color: white;
-    font-size: xx-large;
-    font-weight: bold;
-}
 
 #aa:hover {
     font-weight: bold;
     color: black;
 }
-
-nav {
-    width: 1100px;
-    height: 50px;
-    margin: 0px auto 0px auto;
-    padding: auto 5px;
-    background-color: transparent;
-    color: white;
-    font-size: small;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-}
-
-nav>span {
-    margin: auto 5px;
-    font-weight: normal;
-    color: gray;
-}
-
-nav>span:hover {
-    color: black;
-    font-weight: bold;
-}
-
 .hd_text {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
@@ -218,69 +176,33 @@ nav>span:hover {
     background-color: rgba(0,0,0,0.8);
     color : white;
 }
-
+.bbs{
+    width: 800px;
+    height: auto;
+    margin: 10px auto;
+    /* background-color: green; */
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+    text-align: center;
+}
+.bbs>ul {
+    font-size: large;
+    font-weight: bold;
+    color: darkslategrey;
+    border-bottom : 1px dotted orange;
+}
+ul>.dest{
+    width: 100px;
+}
+ul>.contents{
+    width: 300px;
+}
+ul>.update{
+    width: 100px;
+}
+li{
+    list-style: none;
+}
 .show{
     display: block;
-}
-
-root {
-    --text-color: #f0f4f5;
-    --background-color: #263343;
-    --accent-color: #d49466;
-}
-
-body {
-    margin: 0px;
-    font-family: 'Open sans';
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: darkgreen;
-    padding: 8px 12px;
-}
-
-.navbar__logo {
-    font-size: 24px;
-    color: white;
-}
-
-.navbar__logo i {
-    color: white;
-}
-
-.navbar__menu {
-    display: flex;
-    list-style: none;
-    padding-left: 0px;
-}
-
-.navbar__menu li {
-    padding: 8px 12px;
-    float: right;
-}
-
-.navbar__menu :hover {
-    background: #d49466;
-    border-radius: 4px;
-}
-
-
-.navbar__icons li {
-    padding: 8px 12px;
-}
-
-.navbar__toogleBtn {
-    display: none;
-    position: absolute;
-    right: 32px;
-    font-size: 24px;
-    color: #d49466;
 }

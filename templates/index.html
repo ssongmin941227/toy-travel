@@ -2,27 +2,40 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <!-- <link href="style2.css" rel="stylesheet">
+    <link href="style3.css" rel="stylesheet">
+    <link href="style4.css" rel="stylesheet"> -->
 
     <title>연습</title>
+    <style>
+        .abc {
+            font-size: 12px;
+        }
+        .abc2 {
+            color: red;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="modal-chat">
         <div class="form-chat">
             <p><span class="inform">알고 싶은 여행지를 선택해주세요!</span></p>
-            <select class="inform">
+            <select class="inform" id="dest">
                 <option>베트남</option>
                 <option>태국</option>
                 <option>말레이시아</option>
@@ -33,7 +46,7 @@
             <textarea class="inform" id="contents"></textarea>
             <p> </p>
             <div class="btn-group">
-                <span class="submit">제출</span>
+                <span class="submit" id="submit">제출</span>
                 <span class="close">닫기</span>
             </div>
 
@@ -42,9 +55,7 @@
     <nav class="navbar">
         <div class="navbar__logo">
             <i class="fab fa-accusoft"><span id="aa" type="button" href="#">HangHae 18조</span></i>
-
         </div>
-
         <ul class="navbar__menu">
             <li><a href="">Home</a></li>
             <li><a href="">Login</a></li>
@@ -73,10 +84,36 @@
             </div>
         </div>
     </header>
-    <div class="chat"><span class="open-form">문의하기</span></div>
-    <script src="carousel.js"></script>
-    <script src="chat.js"></script>
 
+    <div class="bbs">
+        <ul>
+            <span class="dest">여행국가</span>
+            <span class="contents">문의내용</span>
+            <span class="update">수정하기</span>
+        </ul>
+        <li>
+            <span class="dest" id="1"></span>
+            <span class="contents" id="2"></span>
+            <span class="update" id="3"></span>
+        </li>
+    </div>
+    <div class="chat"><span class="open-form">문의하기</span></div>
+    <script type="text/javascript" src="carousel.js"></script>
+    <script type="text/javascript" src="chat.js"></script>
+    <script>
+        const temp = document.createElement('button');
+        const temp2 = document.createElement('span');
+        temp2.innerText = "스팬";
+        temp.innerText = "버튼";
+        temp.id = '34';
+        document.body.appendChild(temp);
+        temp.appendChild(temp2);
+        temp.style = 'border:1px solid gray; border-radius: 100px;';
+        temp.classList.add(['abc']);
+        temp.addEventListener('click', (e) => {
+            alert('클릭됨');
+        })
+    </script>
 </body>
 
 </html>
